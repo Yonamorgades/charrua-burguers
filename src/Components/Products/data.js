@@ -35,14 +35,16 @@ export const productData = [
 
 export const productDataTwo = [
   {
+    id:1,
     img: product1,
-    name: 'Doughlicious',
+    name: 'Combo 1',
     desc:
       'Belgian chocolate glazed donuts covered in icing with sprinkles on top',
     price: '$299',
     button: 'Add to Cart'
   },
   {
+    id:2,
     img: menuProduct,
     name: 'Doughlicious',
     desc:
@@ -52,6 +54,7 @@ export const productDataTwo = [
   }
   ,
   {
+    id:3,
     img: product2,
     name: 'Doughlicious',
     desc:
@@ -61,6 +64,7 @@ export const productDataTwo = [
   }
   ,
   {
+    id:4,
     img: product1,
     name: 'Doughlicious',
     desc:
@@ -70,6 +74,7 @@ export const productDataTwo = [
   }
   ,
   {
+    id:5,
     img: product3,
     alt: 'Ice Cream',
     name: 'Caramel Wonder',
@@ -79,6 +84,7 @@ export const productDataTwo = [
     button: 'Add to Cart'
   },
   {
+    id:6,
     img: menuProduct,
     alt: 'Brownie',
     name: 'Brownie Bunch',

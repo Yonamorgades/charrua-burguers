@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {
   ProductsContainer,
   ProductWrapper,
@@ -12,7 +13,7 @@ import {
   ProductButton
 } from './ProductsElements';
 
-const Products = ({ heading, data }) => {
+const Products = ({ heading, data,Cart }) => {
   return (
     <ProductsContainer>
       <ProductsHeading>{heading}</ProductsHeading>
@@ -34,5 +35,6 @@ const Products = ({ heading, data }) => {
     </ProductsContainer>
   );
 };
+const mapStateToProps = state => ({Cart: state.items})
 
-export default Products;
+export default connect(mapStateToProps, {})(Products)

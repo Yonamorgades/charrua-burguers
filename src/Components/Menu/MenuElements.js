@@ -1,21 +1,17 @@
 import styled from 'styled-components';
-import { IoIosAddCircleOutline } from "react-icons/io";
-import { IoIosRemoveCircleOutline } from "react-icons/io";
-
+import {IoIosAddCircleOutline} from "react-icons/io";
+import {IoIosRemoveCircleOutline} from "react-icons/io";
 
 // @media screen and (max-width: 600px){   width: 50%;   display: block;
 // margin-bottom: 20px; }
 export const Row = styled.div `
-  margin-top:5px;
   border-bottom:2px solid gray;
   color:white;
-  @media screen and (max-width: 768px){   
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url(${props => props.img});
-    background-position: center;
-    background-size: cover;
-    padding:0px;
-  }
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+  url(${props => props.img});
+  background-position: center;
+  background-size: cover;
+  heigth:100%;
 `;
 
 export const H3 = styled.p `
@@ -26,10 +22,9 @@ export const H3 = styled.p `
 `;
 export const H1 = styled.p `
   text-transform:uppercase;
-  margin:50px;
-  color;white;
-  font-size:32px;
   text-align:center;
+  font-size:32px;
+  margin:50px 0px;
 `;
 
 export const Scroll = styled.div ` 
@@ -66,11 +61,17 @@ export const ProductCard = styled.div `
 export const ProductInfo = styled.div `
   flex-grow: 1;
   width: 33%;
+  border:2px solid black;
+  padding:5px 20px;
+  border-radius:10px;
+  text-align:center;
+  background-color: rgba(0, 30, 20, 0.4);
   `;
 export const ImgContainer = styled.div `
   flex-grow: 1;
   width: 33%;
-  @media screen and (max-width: 768px){   
+  padding-left:40px;
+  @media screen and (max-width: 1300px){   
     display:none}
   `;
 
@@ -87,18 +88,42 @@ export const ProductImg = styled.div `
   url(${props => props.img});
   background-position: center;
   background-size: cover;
-  height:200px;
-  width:200px;
+  height:18rem;
+  width:18rem;
   border-radius:50%;
   border:1px solid white;
- 
 `;
 
 export const Add = styled(IoIosAddCircleOutline)`
-  font-size: 2rem;
+  font-size: 4rem;
+  color: #ffc500;
+  transition: 0.1s ease-out;
+  &:hover {
+    transition: 0.1s ease-out;
+    transform: scale(1.2); 
+    cursor: pointer;
+  }
+  &:active {
+    transition: 0.1s ease-in;
+     transform: scale(1.5); 
+    cursor: pointer;
+  }
 `;
 export const Remove = styled(IoIosRemoveCircleOutline)`
-  font-size: 2rem;
+  font-size: 4rem;
+  color: #ffc500;
+  transition: 0.2s ease-out;
+  &:hover {
+    transition: 0.1s ease-out;
+    transform: scale(1.2); 
+    cursor: pointer;
+  }
+  &:active {
+    transition: 0.1s ease-in;
+     transform: scale(1.5); 
+    cursor: pointer;
+  }
+
 
 `;
 
@@ -110,8 +135,20 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 text-align: center;
+@media screen and (max-width: 768px){   
+    display:none}
 `;
-
+export const ProductActionsMobile = styled.div `
+  margin-top:10px;
+  display: none;
+  @media screen and (max-width: 768px){   
+    display:flex;
+    width:100%;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+  }
+`;
 export const P = styled.p `
   margin-top:10px;
   font-size:14px;
@@ -119,11 +156,10 @@ export const P = styled.p `
   font-family:Arial, Sans-serif;
 `;
 export const Count = styled.div `
+  font-size:32px;
   margin:0 15px;
   border-radius:10px;
   height:50px;
   background-color:red;
-  padding:5px;
   width:100px;
-  vertical-align:center;
 `;

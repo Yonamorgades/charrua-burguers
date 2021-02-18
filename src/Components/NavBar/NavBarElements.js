@@ -1,45 +1,96 @@
 import styled from 'styled-components';
-import { NavLink as Link } from 'react-router-dom';
-import { FaPizzaSlice } from 'react-icons/fa';
+import {NavLink as Link} from 'react-router-dom';
+import {FaHamburger} from 'react-icons/fa';
+import {FaShoppingCart} from "react-icons/fa"
+import {FaBars} from "react-icons/fa"
 
-export const Nav = styled.nav`
-  background: transparent;
+export const Nav = styled.nav `
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items:center;
   font-weight: 700;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: fixed; 
+  padding-top:20px;
+  width: 100%;
+  z-index:100;
+  border-bottom:gray 1px solid;
+  background-color:black;
+  
 `;
+export const CartIconContainer = styled.div `
+  cursor:pointer;
+
+  ${props => props.count < 1} {
+    &:after {
+      content:'${props => props.count}';
+      color:black;
+      transition: 0.1s ease-out;
+      transform: scale(1.2); 
+      cursor: pointer;
+      top:10px;
+      right:75px;
+      position:absolute;
+      font-size:12px;
+      text-align:center;
+      background-color:#FFC500;
+      width:18px;
+      border-radius:50%;
+      border:1px solid white;
+    }
+  }
+}
+ 
+`;
+
+export const NavIcons = styled.div `
+  display: flex;
+  justify-content: flex-end;
+  padding:5px 15px;
+  
+  width:33%;
+  `
 
 export const NavLink = styled(Link)`
   color: #fff;
   font-size: 2rem;
-  display: flex;
-  align-items: center;
   text-decoration: none;
   cursor: pointer;
-
-  @media screen and (max-width: 400px) {
-    position: absolute;
-    top: 10px;
-    left: 25px;
+  width:33%;
+`;
+export const Logo = styled("img")`
+  width:300px;
+  margin-left:5px;
+`
+export const NavMain = styled("h1")`
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align:center;
+  width:33%;
+  @media screen and (max-width: 768px){   
+   display:none;
   }
 `;
-
-export const NavIcon = styled.div`
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
+export const NavIcon = styled.div `
+  margin:0 10px;
+  padding-right:5px;
   cursor: pointer;
   color: #fff;
-
-  p {
-    transform: translate(-175%, 100%);
-    font-weight: bold;
-  }
 `;
 
-export const Bars = styled(FaPizzaSlice)`
+export const Bars = styled(FaBars)`
   font-size: 2rem;
-  transform: translate(-50%, -15%);
+  margin-left:15px;
+  margin-bottom:5px;
 `;
+
+
+export const CartIcon = styled(FaShoppingCart)`
+  font-size: 2rem;
+  color:white;
+  margin-bottom:5px;
+`
