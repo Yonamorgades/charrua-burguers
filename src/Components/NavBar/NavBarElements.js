@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-import {NavLink as Link} from 'react-router-dom';
+// import {NavLink as Link} from 'react-router-dom';
 import {FaHamburger} from 'react-icons/fa';
 import {FaShoppingCart} from "react-icons/fa"
 import {FaBars} from "react-icons/fa"
+import { HashLink } from 'react-router-hash-link';
+
 
 export const Nav = styled.nav `
   height: 80px;
@@ -53,7 +55,7 @@ export const NavIcons = styled.div `
   width:33%;
   `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(HashLink)`
   color: #fff;
   font-size: 2rem;
   text-decoration: none;
@@ -61,8 +63,8 @@ export const NavLink = styled(Link)`
   width:33%;
 `;
 export const Logo = styled("img")`
-  width:300px;
-  margin-left:5px;
+  width:14rem;
+  margin-left:20px;
 `
 export const NavMain = styled("h1")`
   color: #fff;

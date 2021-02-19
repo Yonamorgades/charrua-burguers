@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin
-} from 'react-icons/fa';
+import {FaFacebook, FaInstagram} from 'react-icons/fa';
+import {GoMail} from 'react-icons/go';
 import {
   FooterContainer,
   FooterWrap,
@@ -13,27 +8,31 @@ import {
   SocialMediaWrap,
   SocialLogo,
   SocialIcons,
-  SocialIconLink
+  SocialIconLink,
+  SocialName,
+  SocialNameContainer
 } from './FooterElements';
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterWrap>
-        <SocialMedia>
-          <SocialMediaWrap>
-            <SocialLogo to='/'>Charrua</SocialLogo>
             <SocialIcons>
               <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
-                <FaFacebook />
+                <SocialNameContainer>
+                  <FaFacebook/><SocialName>/CharruaBurguers</SocialName>
+                </SocialNameContainer>
               </SocialIconLink>
               <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
-                <FaInstagram />
+                <SocialNameContainer>
+                  <FaInstagram/><SocialName>@CharruaBurguers</SocialName>
+                </SocialNameContainer>
+              </SocialIconLink>
+              <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
+                <SocialNameContainer>
+                  <GoMail/><SocialName>Charrua.Burguers@gmail.com</SocialName>
+                </SocialNameContainer>
               </SocialIconLink>
             </SocialIcons>
-          </SocialMediaWrap>
-        </SocialMedia>
-      </FooterWrap>
     </FooterContainer>
   );
 };

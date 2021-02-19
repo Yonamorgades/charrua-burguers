@@ -2,18 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
-  background-color: #0d0909;
-`;
-
-export const FooterWrap = styled.div`
-  padding: 16px 24px;
-  border:1px solid white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
+  background-color:black;
+  border-top:1px solid white;
 `;
 
 export const SocialMedia = styled.section`
@@ -21,39 +11,40 @@ export const SocialMedia = styled.section`
   width: 100%;
 `;
 
-export const SocialMediaWrap = styled.div`
+
+  
+export const SocialNameContainer = styled.div`
+  color:white;
+  font-size:20px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+`;
+export const SocialName = styled.p`
+    letter-spacing:1px;
+    font-weigth:200;
+    font-style:Bold;
+    margin:0 10px;
+    font-size:1rem;
+    @media screen and (max-width: 820px) {
+      display:none;
+    }
+`;
+export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: 16px auto 0 auto;
+  width:100%;
+  height:50px;
   @media screen and (max-width: 820px) {
-    flex-direction: column;
+    justify-content: flex-end;
   }
-`;
 
-export const SocialLogo = styled(Link)`
-  color: #fff;
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  font-weight: bold;
-  
-`;
-
-export const SocialIcons = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 240px;
 `;
 
 export const SocialIconLink = styled.a`
   color: #fff;
   margin:0 20px;
   font-size: 24px;
+  text-decoration:none;
 `;

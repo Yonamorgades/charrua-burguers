@@ -17,7 +17,13 @@ import bg from '../../Images/Logo/vector/default-monochrome.svg'
 const Navbar = ({toggle, Cart, addItem, RemoveItem}) => {
   return (
     <Nav>
-      <NavLink to='/'>
+      <NavLink
+        to="/some/path#with-hash-fragment"
+        to="/#Hero"
+        activeClassName="selected"
+        activeStyle={{
+        color: 'red'
+      }}>
         <Logo src={bg}></Logo>
       </NavLink>
       <NavMain></NavMain>

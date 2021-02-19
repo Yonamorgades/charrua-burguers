@@ -3,9 +3,9 @@ import { FeatureContainer, FeatureButton } from './FeatureElements';
 
 const Feature = () => {
   return (
-    <FeatureContainer>
+    <FeatureContainer id="Sale">
       <h1>Oferta del dia</h1>
-      <p>50% de descuento en la segunda compra de una hamburguesa el Pistolero</p>
+      <p>50% de descuento en la segunda compra de una hamburguesa El pistolero</p>
       <FeatureButton>Comprar ahora</FeatureButton>
     </FeatureContainer>
   );

@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Provider store={Cart}>
         <GlobalStyle/>
-        <Hero/>
+        <Hero id="Hero"/>
         <Products heading='Nuestras estrellas' data={productData}/>
         <Feature/>
         <Menu heading="Nuestro plantel" data={productDataTwo}></Menu>

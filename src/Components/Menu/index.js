@@ -22,7 +22,7 @@ import {
 function Menu({heading, data, Cart, addItem, RemoveItem}) {
 
   return (
-    <MenuContainer>
+    <MenuContainer id="Menu">
       <H1>{heading}</H1>
       <Scroll>
         {data.map((p, i) => {
