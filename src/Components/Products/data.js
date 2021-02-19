@@ -6,16 +6,14 @@ import menuProduct from '../../Images/menu-1.jpg';
 export const productData = [
   {
     img: product1,
-    alt: 'Hamburguesa',
     name: 'El pistolero',
     desc:
       'Morron, Cebolla, 120g Carne, Tomate , Queso, Mostaza',
-    price: '$399',
+    price: '$350',
     button: 'Agregar al carrito'
   },
   {
     img: product2,
-    alt: 'Hamburguesa',
     name: 'La rendidora',
     desc:
       'Huevo frito, 160g Carne, Tomate , Queso',
@@ -37,60 +35,44 @@ export const productDataTwo = [
   {
     id:1,
     img: product1,
-    name: 'Combo 1',
+    name: 'Hamburguesa completa',
     desc:
-      'Belgian chocolate glazed donuts covered in icing with sprinkles on top',
-    price: '$299',
-    button: 'Add to Cart'
+    'Morron, Cebolla, 120g Carne, Tomate , Mozzarella, Jamon, Huevo frito, Cheddar, Lechuga, Panceta',
+    price: '$300',
   },
   {
     id:2,
     img: menuProduct,
-    name: 'Doughlicious',
+    name: 'Hamburguesa economica',
     desc:
-      'Belgian chocolate glazed donuts covered in icing with sprinkles on top',
-    price: '$299',
-    button: 'Add to Cart'
+    'Tomate, Lechuga, 120g Carne, Muzzarella',
+    price: '$160',
   }
   ,
   {
     id:3,
     img: product2,
-    name: 'Doughlicious',
+    name: 'Hamburguesa infantil',
     desc:
-      'Belgian chocolate glazed donuts covered in icing with sprinkles on top',
-    price: '$299',
-    button: 'Add to Cart'
+    '120g Carne, Tomate , Mozzarella, Jamon, Huevo frito, Cheddar, Lechuga, Panceta',
+    price: '$180',
   }
   ,
   {
-    id:4,
+    id:6,
     img: product1,
-    name: 'Doughlicious',
+    name: 'Hamburguesa de pollo',
     desc:
-      'Belgian chocolate glazed donuts covered in icing with sprinkles on top',
-    price: '$299',
-    button: 'Add to Cart'
+    'Morron, Cebolla, 120g pollo, Tomate , Mozzarella, Jamon, Huevo frito, Cheddar, Lechuga, Panceta',
+    price: '$240',
   }
   ,
   {
     id:5,
     img: product3,
-    alt: 'Ice Cream',
-    name: 'Caramel Wonder',
+    name: 'Hamburguesa picante',
     desc:
-      'Vanilla ice cream covered with caramel and chocolate glaze topped with a coco stick',
-    price: '$12',
-    button: 'Add to Cart'
+    'Morron, Cebolla, 120g Carne, Tomate , Queso, Mostaza, Salsa picante, Pimientos',
+    price: '$240',
   },
-  {
-    id:6,
-    img: menuProduct,
-    alt: 'Brownie',
-    name: 'Brownie Bunch',
-    desc:
-      'Double fudge brownie squares topped with white chocolate pieces and macadamia nuts',
-    price: '$299',
-    button: 'Add to Cart'
-  }
 ];

@@ -13,7 +13,7 @@ import {
   CartIconContainer
 } from './NavBarElements';
 import {connect} from 'react-redux';
-import bg from '../../Images/Logo/vector/default-monochrome.svg'
+import bg from '../../Images/Logo/vector/isolated-monochrome-white.svg'
 const Navbar = ({toggle, Cart, addItem, RemoveItem}) => {
   return (
     <Nav>
