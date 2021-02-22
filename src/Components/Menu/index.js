@@ -1,61 +1,78 @@
 import React from 'react'
 import {connect} from 'react-redux';
+import Carousel from 'react-elastic-carousel'
+
 import {
-  Row,
   ProductCard,
   H1,
   H3,
   P,
   Price,
-  ImgContainer,
   ProductImg,
   MenuContainer,
-  Scroll,
   ProductInfo,
   ProductActions,
-  ProductActionsMobile,
   Count,
   Add,
-  Remove
+  Remove,
+  FilterContainer,FilterItem,CheckFilter
 } from './MenuElements';
 
 function Menu({heading, data, Cart, addItem, RemoveItem}) {
-
   return (
     <MenuContainer id="Menu">
       <H1>{heading}</H1>
-      <Scroll>
+      {/* <FilterContainer>
+        <FilterItem><CheckFilter type="checkbox"></CheckFilter>Todo</FilterItem>
+        <FilterItem><CheckFilter type="checkbox"></CheckFilter>Hamburguesa</FilterItem>
+        <FilterItem><CheckFilter type="checkbox"></CheckFilter>Bebidas</FilterItem>
+      </FilterContainer> */}
+      <Carousel
+        showArrows={false}
+        transitionMs={1000}
+        pagination={false}
+        focusOnSelect={false}
+        breakPoints={[
+        {
+          width: 550,
+          itemsToShow: 1,
+          itemsToScroll: 1,
+          pagination: false
+        }, {
+          width: 850,
+          itemsToShow: 3
+        }, {
+          width: 1150,
+          itemsToShow: 3,
+          itemsToScroll: 2
+        }, {
+          width: 1450,
+          itemsToShow: 4
+        }
+      ]}
+        enableSwipe>
         {data.map((p, i) => {
           return (
-            <Row key={i} img={p.img}>
-              <ProductCard >
-                <ImgContainer>
-                  <ProductImg img={p.img}></ProductImg>
-                </ImgContainer>
-                <ProductInfo>
-                  <H3>{p.name}</H3>
-                  <P>{p.desc}</P>
-                  <Price>{p.price}</Price>
-                  <ProductActionsMobile>
-                  <Add onClick={() => addItem(p)}></Add>
-                  <Count><p>{Cart
-                      .filter(i => i.id === p.id)
-                      .length}</p></Count>
-                  <Remove onClick={() => RemoveItem(p)}></Remove>
-                </ProductActionsMobile>
-                </ProductInfo>
+            <ProductCard >
+              <ProductImg img={p.img}></ProductImg>
+              <ProductInfo>
+                <H3>{p.name}</H3>
+                <P>{p.desc}</P>
+                <Price>{p.price}</Price>
                 <ProductActions>
                   <Add onClick={() => addItem(p)}></Add>
-                  <Count><p>{Cart
-                      .filter(i => i.id === p.id)
-                      .length}</p></Count>
+                  <Count>
+                    <p>{Cart
+                        .filter(i => i.id === p.id)
+                        .length}</p>
+                  </Count>
                   <Remove onClick={() => RemoveItem(p)}></Remove>
                 </ProductActions>
-              </ProductCard>
-            </Row>
+              </ProductInfo>
+            </ProductCard>
           )
         })}
-      </Scroll>
+      </Carousel>
     </MenuContainer>
   )
 

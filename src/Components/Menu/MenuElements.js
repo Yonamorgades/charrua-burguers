@@ -2,41 +2,45 @@ import styled from 'styled-components';
 import {IoIosAddCircleOutline} from "react-icons/io";
 import {IoIosRemoveCircleOutline} from "react-icons/io";
 
-// @media screen and (max-width: 600px){   width: 50%;   display: block;
-// margin-bottom: 20px; }
+
 export const Row = styled.div `
   border-bottom:2px solid gray;
   color:white;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-  url(${props => props.img});
   background-position: center;
   background-size: cover;
   heigth:100%;
+  display:flex;
+  flex-direction:row;
 `;
 
+export const FilterContainer = styled.div`
+  display:flex;
+  flex-direction:row;
+  width:50%;
+  border:1px solid white;
+  margin-left:30px;
+`
+export const CheckFilter = styled('input')`
+  margin:0px 10px;
+`
+export const FilterItem = styled.span`
+  margin:10px 30px;
+`
 export const H3 = styled.p `
   letter-spacing:2px;
   font-size: clamp(2rem, 2.5vw, 3rem);
   text-align: center;
   margin-bottom: 2rem;
+  height:120px;
+
 `;
 export const H1 = styled.p `
   text-transform:uppercase;
   text-align:center;
   font-size:32px;
-  margin:50px 0px;
 `;
 
-export const Scroll = styled.div ` 
-  overflow : scroll;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-  max-height:700px;
-  background-color:black;
-  &::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-  }
-`;
 
 export const MenuContainer = styled.div `
   width: 100%;
@@ -48,32 +52,27 @@ export const MenuContainer = styled.div `
 `;
 
 export const ProductCard = styled.div `
+  border-left:2px solid white; 
+  border-right:2px solid white; 
+  margin:20px 70px;
+  border-radius:20px;
   display:flex;
-  flex-direction:row;
-  flex-wrap: wrap;
+  flex-direction:column;
   color:white;
-  margin:20px 50px;
   padding:20px;
-  height:100%;
- 
-`;
+  align-items:center;
+  height:700px;
+  `;
 
 export const ProductInfo = styled.div `
   flex-grow: 1;
-  width: 33%;
   border:2px solid black;
   padding:5px 20px;
   border-radius:10px;
   text-align:center;
   background-color: rgba(0, 30, 20, 0.4);
   `;
-export const ImgContainer = styled.div `
-  flex-grow: 1;
-  width: 33%;
-  padding-left:40px;
-  @media screen and (max-width: 1300px){   
-    display:none}
-  `;
+
 
 export const Price = styled.div `
   color:#FDC500;
@@ -83,7 +82,6 @@ export const Price = styled.div `
 `;
 
 export const ProductImg = styled.div `
-  position:relative;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
   url(${props => props.img});
   background-position: center;
@@ -128,32 +126,20 @@ export const Remove = styled(IoIosRemoveCircleOutline)`
 `;
 
 export const ProductActions = styled.div `
-width:33%;
 flex-grow: 1;
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 text-align: center;
-@media screen and (max-width: 768px){   
-    display:none}
 `;
-export const ProductActionsMobile = styled.div `
-  margin-top:10px;
-  display: none;
-  @media screen and (max-width: 768px){   
-    display:flex;
-    width:100%;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-  }
-`;
+
 export const P = styled.p `
   margin-top:10px;
-  font-size:14px;
+  font-size:18px;
   font-weight:0;
   font-family:Arial, Sans-serif;
+  height:80px;
 `;
 export const Count = styled.div `
   font-size:32px;
