@@ -2,10 +2,8 @@ import React from 'react';
 
 import {
   Nav,
-  NavLink,
   NavIcon,
   Bars,
-  MobileBars,
   CartIcon,
   NavMain,
   NavIcons,
@@ -17,15 +15,7 @@ import bg from '../../Images/Logo/vector/isolated-monochrome-white.svg'
 const Navbar = ({toggle, Cart, addItem, RemoveItem}) => {
   return (
     <Nav>
-      <NavLink
-        to="/some/path#with-hash-fragment"
-        to="/#Hero"
-        activeClassName="selected"
-        activeStyle={{
-        color: 'red'
-      }}>
-        <Logo src={bg}></Logo>
-      </NavLink>
+       <a href="/"><Logo src={bg}></Logo></a>
       <NavMain></NavMain>
       <NavIcons>
         <CartIconContainer count={Cart.length}>

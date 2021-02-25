@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {connect} from 'react-redux';
 import Carousel from 'react-elastic-carousel'
 
@@ -15,18 +15,48 @@ import {
   Count,
   Add,
   Remove,
-  FilterContainer,FilterItem,CheckFilter
+  FilterContainer,
+  FilterItem,
+  CheckFilter
 } from './MenuElements';
 
 function Menu({heading, data, Cart, addItem, RemoveItem}) {
+  const [filterValue,
+    setFilterValue] = useState("");
+  const handleFilter = (event) => {
+    setFilterValue(event.target.value)
+  }
+
   return (
     <MenuContainer id="Menu">
       <H1>{heading}</H1>
-      {/* <FilterContainer>
-        <FilterItem><CheckFilter type="checkbox"></CheckFilter>Todo</FilterItem>
-        <FilterItem><CheckFilter type="checkbox"></CheckFilter>Hamburguesa</FilterItem>
-        <FilterItem><CheckFilter type="checkbox"></CheckFilter>Bebidas</FilterItem>
-      </FilterContainer> */}
+      <FilterContainer>
+        
+        <FilterItem>
+          <CheckFilter
+            type="radio"
+            value=""
+            checked={!filterValue
+            ? true
+            : false}
+            onClick={(e) => handleFilter(e)}></CheckFilter>Todo</FilterItem>
+        <FilterItem>
+          <CheckFilter
+            type="radio"
+            value="burguer"
+            checked={filterValue === "burguer"
+            ? true
+            : false}
+            onClick={(e) => handleFilter(e)}></CheckFilter>Hamburguesa</FilterItem>
+        <FilterItem>
+          <CheckFilter
+            type="radio"
+            value="drink"
+            checked={filterValue === "drink"
+            ? true
+            : false}
+            onClick={(e) => handleFilter(e)}></CheckFilter>Bebidas</FilterItem>
+      </FilterContainer>
       <Carousel
         showArrows={false}
         transitionMs={1000}
@@ -51,9 +81,13 @@ function Menu({heading, data, Cart, addItem, RemoveItem}) {
         }
       ]}
         enableSwipe>
+
         {data.map((p, i) => {
+          if (filterValue !== "" && p.category !== filterValue) {
+            return false;
+          }
           return (
-            <ProductCard >
+            <ProductCard key={i}>
               <ProductImg img={p.img}></ProductImg>
               <ProductInfo>
                 <H3>{p.name}</H3>

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 // import {NavLink as Link} from 'react-router-dom';
-import {FaHamburger} from 'react-icons/fa';
 import {FaShoppingCart} from "react-icons/fa"
 import {FaBars} from "react-icons/fa"
 import { HashLink } from 'react-router-hash-link';
@@ -55,13 +54,7 @@ export const NavIcons = styled.div `
   width:33%;
   `
 
-export const NavLink = styled(HashLink)`
-  color: #fff;
-  font-size: 2rem;
-  text-decoration: none;
-  cursor: pointer;
-  width:33%;
-`;
+
 export const Logo = styled("img")`
   width:14rem;
   margin-left:20px;

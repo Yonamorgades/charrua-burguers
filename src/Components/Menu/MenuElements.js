@@ -18,11 +18,28 @@ export const FilterContainer = styled.div`
   display:flex;
   flex-direction:row;
   width:50%;
-  border:1px solid white;
   margin-left:30px;
 `
 export const CheckFilter = styled('input')`
   margin:0px 10px;
+  background-color: black;
+  border: .0625em solid rgba(255,255,255,.5);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0 white;
+  cursor: pointer;
+  font: inherit;
+  height: 1em;
+  outline: none;
+  width: 1em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &:checked {
+    transform:scale(1.6);
+    background-color: #white;
+    box-shadow: inset 0 0 0 .1875em #FFC500;
+    -webkit-transition: background .15s, box-shadow .1s; 
+    transition: background .15s, box-shadow .1s; 
+  }
 `
 export const FilterItem = styled.span`
   margin:10px 30px;
@@ -54,7 +71,7 @@ export const MenuContainer = styled.div `
 export const ProductCard = styled.div `
   border-left:2px solid white; 
   border-right:2px solid white; 
-  margin:20px 70px;
+  margin:50px;
   border-radius:20px;
   display:flex;
   flex-direction:column;
