@@ -77,7 +77,7 @@ function Menu({heading, data, Cart, addItem, RemoveItem}) {
           itemsToScroll: 2
         }, {
           width: 1450,
-          itemsToShow: 4
+          itemsToShow: 3
         }
       ]}
         enableSwipe>
