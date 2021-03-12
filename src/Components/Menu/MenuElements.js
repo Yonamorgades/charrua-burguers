@@ -19,38 +19,41 @@ export const FilterContainer = styled.div`
   flex-direction:row;
   width:50%;
   margin-left:30px;
-`
-export const CheckFilter = styled('input')`
-  margin:0px 10px;
-  background-color: black;
-  border: .0625em solid rgba(255,255,255,.5);
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 0 white;
-  cursor: pointer;
-  font: inherit;
-  height: 1em;
-  outline: none;
-  width: 1em;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  &:checked {
-    transform:scale(1.6);
-    background-color: #white;
-    box-shadow: inset 0 0 0 .1875em #FFC500;
-    -webkit-transition: background .15s, box-shadow .1s; 
-    transition: background .15s, box-shadow .1s; 
-  }
-`
-export const FilterItem = styled.span`
-  margin:10px 30px;
-`
-export const H3 = styled.p `
-  letter-spacing:2px;
-  font-size: clamp(2rem, 2.5vw, 3rem);
-  text-align: center;
-  margin-bottom: 2rem;
-  height:120px;
+  @media screen and (max-width: 768px){   
+    justify-content:center;
+    width:100%;
+    margin:0;
+   }
 
+`
+
+export const FilterItem = styled.span`
+  display:flex;
+  flex-direction:row;
+  margin:0 10px 0 30px;
+  font-weight:300;
+  font-size:1.4rem;
+  color: white;
+  padding:0 10px;
+  &:hover{
+    border-bottom:2px solid #FDC500;
+    border-right:1px solid #FDC500;
+  }
+  ${props => !props.active} {
+    border-bottom:2px solid #FDC500;
+    border-right:1px solid #FDC500;
+  }
+  @media screen and (max-width: 768px){   
+    font-size:1.8rem;
+    margin:20px 10px 20px 50px;
+   }
+`
+
+
+export const H3 = styled.p `
+  font-size: 20px;
+  text-align: center;
+  margin-bottom:20px;
 `;
 export const H1 = styled.p `
   text-transform:uppercase;
@@ -64,21 +67,21 @@ export const MenuContainer = styled.div `
   position: relative;
   color:white;
   padding-top:20px;
-  border-top:3px solid #ffc500;
+  border-top:3px solid #42B6E7;
   background-color:black;
 `;
 
 export const ProductCard = styled.div `
-  border-left:2px solid white; 
-  border-right:2px solid white; 
-  margin:50px;
+  border-left:2px solid #42B6E7; 
+  border-right:2px solid #42B6E7; 
+  margin:20px 50px;
   border-radius:20px;
   display:flex;
   flex-direction:column;
   color:white;
   padding:20px;
   align-items:center;
-  height:700px;
+  height:500px;
   `;
 
 export const ProductInfo = styled.div `
@@ -103,8 +106,8 @@ export const ProductImg = styled.div `
   url(${props => props.img});
   background-position: center;
   background-size: cover;
-  height:18rem;
-  width:18rem;
+  height:15rem;
+  width:15rem;
   border-radius:50%;
   border:1px solid white;
 `;
@@ -124,6 +127,16 @@ export const Add = styled(IoIosAddCircleOutline)`
     cursor: pointer;
   }
 `;
+
+export const FilterText = styled.p`
+@media screen and (max-width: 768px){   
+  display:none;
+ }
+`;
+
+
+
+
 export const Remove = styled(IoIosRemoveCircleOutline)`
   font-size: 4rem;
   color: #ffc500;
@@ -152,11 +165,9 @@ text-align: center;
 `;
 
 export const P = styled.p `
-  margin-top:10px;
-  font-size:18px;
+  font-size:12px;
   font-weight:0;
   font-family:Arial, Sans-serif;
-  height:80px;
 `;
 export const Count = styled.div `
   font-size:32px;

@@ -3,10 +3,6 @@ import {FaFacebook, FaInstagram} from 'react-icons/fa';
 import {GoMail} from 'react-icons/go';
 import {
   FooterContainer,
-  FooterWrap,
-  SocialMedia,
-  SocialMediaWrap,
-  SocialLogo,
   SocialIcons,
   SocialIconLink,
   SocialName,

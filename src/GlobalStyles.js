@@ -7,4 +7,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Kanit', sans-serif;
   }
+  .rec-carousel-item  div:focus {
+    outline: none;
+    box-shadow: none;
+  }
 `;

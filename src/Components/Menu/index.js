@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {connect} from 'react-redux';
 import Carousel from 'react-elastic-carousel'
-
+import {GiHamburger,GiBeerStein,GiMeal} from 'react-icons/gi';
 import {
   ProductCard,
   H1,
@@ -17,45 +17,29 @@ import {
   Remove,
   FilterContainer,
   FilterItem,
-  CheckFilter
+  FilterText
 } from './MenuElements';
 
 function Menu({heading, data, Cart, addItem, RemoveItem}) {
   const [filterValue,
     setFilterValue] = useState("");
-  const handleFilter = (event) => {
-    setFilterValue(event.target.value)
+  const handleFilter = (value) => {
+    setFilterValue(value)
   }
 
   return (
     <MenuContainer id="Menu">
       <H1>{heading}</H1>
       <FilterContainer>
-        
-        <FilterItem>
-          <CheckFilter
-            type="radio"
-            value=""
-            checked={!filterValue
-            ? true
-            : false}
-            onClick={(e) => handleFilter(e)}></CheckFilter>Todo</FilterItem>
-        <FilterItem>
-          <CheckFilter
-            type="radio"
-            value="burguer"
-            checked={filterValue === "burguer"
-            ? true
-            : false}
-            onClick={(e) => handleFilter(e)}></CheckFilter>Hamburguesa</FilterItem>
-        <FilterItem>
-          <CheckFilter
-            type="radio"
-            value="drink"
-            checked={filterValue === "drink"
-            ? true
-            : false}
-            onClick={(e) => handleFilter(e)}></CheckFilter>Bebidas</FilterItem>
+            <FilterItem onClick={() => handleFilter('burguer')} active={filterValue == 'burguer' ? 1 : 0} >
+              <GiHamburger></GiHamburger> <FilterText>Hamburguesas</FilterText>
+            </FilterItem>
+            <FilterItem onClick={() => handleFilter('drink')} active={filterValue == 'drink' ? 1 : 0}>
+              <GiBeerStein></GiBeerStein> <FilterText>Bebidas</FilterText>
+            </FilterItem>
+            <FilterItem onClick={() => handleFilter("")} active={filterValue == '' ? 1 : 0}>
+              <GiMeal></GiMeal> <FilterText>Todo</FilterText>
+            </FilterItem>
       </FilterContainer>
       <Carousel
         showArrows={false}

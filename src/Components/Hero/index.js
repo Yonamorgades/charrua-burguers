@@ -25,7 +25,7 @@ const Hero = () => {
         <HeroItems>
           <HeroH1>La mejor seleccion</HeroH1>
           <HeroP>100% Caseras</HeroP>
-          <HeroBtn>Pedila aca</HeroBtn>
+          <HeroBtn>Ordene aqui</HeroBtn>
         </HeroItems>
       </HeroContent>
     </HeroContainer>

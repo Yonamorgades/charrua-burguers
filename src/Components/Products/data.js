@@ -12,7 +12,7 @@ export const productData = [
     name: 'El pistolero',
     desc:
       'Morron, Cebolla, 120g Carne, Tomate , Queso, Mostaza',
-    price: '$350',
+    price: 350,
     button: 'Agregar al carrito'
   },
   {
@@ -20,7 +20,7 @@ export const productData = [
     name: 'La rendidora',
     desc:
       'Huevo frito, 160g Carne, Tomate , Queso',
-    price: '$300',
+    price: 300,
     button: 'Agregar al carrito'
   },
   {
@@ -29,7 +29,7 @@ export const productData = [
     name: 'La titular',
     desc:
       '160g Carne, 2 Huevos, Panceta, Queso cheddar',
-    price: '$420',
+    price: 420,
     button: 'Agregar al carrito'
   }
 ];
@@ -42,7 +42,7 @@ export const productDataTwo = [
     name: 'Hamburguesa completa',
     desc:
     'Morron, Cebolla, 120g Carne, Tomate , Mozzarella, Jamon, Huevo frito, Cheddar, Lechuga, Panceta',
-    price: '$300',
+    price: 300,
   },
   {
     id:2,
@@ -51,7 +51,7 @@ export const productDataTwo = [
     name: 'Hamburguesa economica',
     desc:
     'Tomate, Lechuga, 120g Carne, Muzzarella',
-    price: '$160',
+    price: 160,
   }
   ,
   {
@@ -61,7 +61,7 @@ export const productDataTwo = [
     name: 'Hamburguesa infantil',
     desc:
     '120g Carne, Tomate , Mozzarella, Jamon, Huevo frito, Cheddar, Lechuga, Panceta',
-    price: '$180',
+    price: 180,
   }
   ,
   {
@@ -71,7 +71,7 @@ export const productDataTwo = [
     name: 'Hamburguesa de pollo',
     desc:
     'Morron, Cebolla, 120g pollo, Tomate , Mozzarella, Jamon, Huevo frito, Cheddar, Lechuga, Panceta',
-    price: '$240',
+    price: 240,
   }
   ,
   {
@@ -81,7 +81,7 @@ export const productDataTwo = [
     name: 'Hamburguesa picante',
     desc:
     'Morron, Cebolla, 120g Carne, Tomate , Queso, Mostaza, Salsa picante, Pimientos',
-    price: '$240',
+    price: 240,
   },
   {
     id:6,
@@ -90,7 +90,7 @@ export const productDataTwo = [
     name: 'Cerveza Norteña',
     desc:
     'Cerveza 1Lt Norteña',
-    price: '$200',
+    price: 200,
   },
   {
     id:7,
@@ -99,7 +99,7 @@ export const productDataTwo = [
     name: 'Cerveza Corona',
     desc:
     'Cerveza 710mm Corona',
-    price: '$200',
+    price: 200,
   },
   {
     id:8,
@@ -108,6 +108,6 @@ export const productDataTwo = [
     name: 'CocaCola',
     desc:
     'Cocacola 1Lt No retornable',
-    price: '$170',
+    price: 170,
   },
 ];

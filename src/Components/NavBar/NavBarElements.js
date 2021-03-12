@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-// import {NavLink as Link} from 'react-router-dom';
-import {FaShoppingCart} from "react-icons/fa"
-import {FaBars} from "react-icons/fa"
-import { HashLink } from 'react-router-hash-link';
+import {GiShoppingCart,GiHamburgerMenu} from "react-icons/gi"
 
 
 export const Nav = styled.nav `
@@ -77,14 +74,15 @@ export const NavIcon = styled.div `
   color: #fff;
 `;
 
-export const Bars = styled(FaBars)`
+export const Bars = styled(GiHamburgerMenu)`
   font-size: 2rem;
   margin-left:15px;
   margin-bottom:5px;
+  
 `;
 
 
-export const CartIcon = styled(FaShoppingCart)`
+export const CartIcon = styled(GiShoppingCart)`
   font-size: 2rem;
   color:white;
   margin-bottom:5px;
