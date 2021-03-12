@@ -90,7 +90,6 @@ export const ProductInfo = styled.div `
   padding:5px 20px;
   border-radius:10px;
   text-align:center;
-  background-color: rgba(0, 30, 20, 0.4);
   `;
 
 
